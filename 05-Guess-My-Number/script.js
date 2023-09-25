@@ -6,12 +6,13 @@ const body = document.querySelector('body');
 const number = document.querySelector('.number');
 const highScore = document.querySelector('.highscore');
 const guessField = document.querySelector('.guess');
+const h1 = document.querySelector('h1');
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let highScoreCount = 0;
 let scoreCount = 20; //state variable;
 
-const scoreCounter = function () {
+const scoreCounterAndGameOver = function () {
   if (scoreCount > 1) {
     scoreCount--;
     score.textContent = scoreCount;
@@ -20,7 +21,9 @@ const scoreCounter = function () {
   scoreCount = 0;
   score.textContent = scoreCount;
   message.textContent = '💥 You lost the game!';
-
+  h1.textContent = 'GAME OVER!';
+  body.style.backgroundColor = '#682579';
+  number.textContent = '💀';
 };
 
 
@@ -35,6 +38,7 @@ document.querySelector('.check').addEventListener('click', function () {
     // when player wins
   } else if (guess === secretNumber) {
     message.textContent = '🎉 Correct Number!';
+    h1.textContent = 'YOU WIN!';
     body.style.backgroundColor = '#60b347';
     number.textContent = secretNumber;
     number.style.width = '30rem';
@@ -49,25 +53,22 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess > secretNumber) {
     if (scoreCount > 1) {
       message.textContent = '📈 Too high!';
-      scoreCounter();
+      scoreCounterAndGameOver();
     } else {
-      scoreCounter();
+      scoreCounterAndGameOver();
     }
 
     // when guess is too low
   } else if (guess < secretNumber) {
     if (scoreCount > 1) {
       message.textContent = '📉 Too low!';
-      scoreCounter();
+      scoreCounterAndGameOver();
     } else {
-      scoreCounter();
+      scoreCounterAndGameOver();
     }
   }
 });
 
-// document.querySelector('.again').addEventListener('click', () => { location.reload() });
-
-// my code
 document.querySelector('.again').addEventListener('click', () => {
   body.style.backgroundColor = '#222';
   number.textContent = '?';
@@ -77,8 +78,7 @@ document.querySelector('.again').addEventListener('click', () => {
   guessField.value = '';
   number.style.width = '15rem';
   message.textContent = 'Start guessing...';
+  h1.textContent = 'Guess My Number!';
 });
 
-// jonas code
-// document.querySelector('.again').addEventListener('click', () => { });
 
