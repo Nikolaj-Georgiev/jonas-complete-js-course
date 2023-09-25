@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="A game where you need to guess the correct number">
     <link rel="stylesheet" href="style.css" />
     <title>Guess My Number!</title>
   </head>
+
   <body>
     <header>
       <h1>Guess My Number!</h1>
@@ -16,7 +19,8 @@
     </header>
     <main>
       <section class="left">
-        <input type="number" class="guess" />
+        <label for="guess"></label>
+        <input type="number" class="guess" id="guess" />
         <button class="btn check">Check!</button>
       </section>
       <section class="right">
@@ -29,4 +33,5 @@
     </main>
     <script src="script.js"></script>
   </body>
+
 </html>
