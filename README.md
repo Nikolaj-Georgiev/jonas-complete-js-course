@@ -5,7 +5,7 @@ A complete JavaScript course by Jonas Schmedtmann
 
 - Guess my number game: https://guess-my-number-gnikolay.netlify.app/
   
-This is a game where the player is trying to guess the random number.
+  This is a game where the player is trying to guess the random number.
 
 - Pig game: https://pig-game-gnikolay.netlify.app/
 
