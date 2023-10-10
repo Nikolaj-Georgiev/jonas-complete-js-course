@@ -215,13 +215,13 @@ const totalDepositsUSD = movements
   .reduce((acc, mov) => acc + mov, 0);
   console.log(totalDepositsUSD);
 
-*/
+
 
 /////////////////////////////
 // FIND
 console.log(movements);
 
-const firstWithdrawal = movements.find(mov => mov < 0);
+  const firstWithdrawal = movements.find(mov => mov < 0);
 console.log(firstWithdrawal);
 
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
@@ -229,9 +229,94 @@ console.log(account);
 
 // let acc1 = {}
 // for (const acc of accounts.values()) {
-//   // console.log(acc.owner);
-//   if (acc.owner === 'Jessica Davis') {
-//     acc1 = { ...acc };
-//   }
-// }
-// console.log(acc1);
+  //   // console.log(acc.owner);
+  //   if (acc.owner === 'Jessica Davis') {
+    //     acc1 = { ...acc };
+    //   }
+    // }
+    // console.log(acc1);
+
+    /////////////////////////////////
+    // Some and Every
+
+    console.log(movements);
+
+    // EQUALITY
+    console.log(movements.includes(-130));
+
+    // SOME: CONDITION
+    console.log(movements.some(mov => mov === -130));
+
+    const anyDeposits = movements.some(mov => mov > 0);
+    console.log(anyDeposits);
+
+    // EVERY - RETURNS TRUE IF ALL THE ELEMENTS IN THE ARRAY SATISFY THE PREDICATE CONDITION
+    console.log(movements.every(mov => mov > 0));
+    console.log(account4.movements.every(mov => mov > 0));
+
+    // N.B. Separate callback
+    const deposit = mov => mov > 0;
+    console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
+
+///////////////////////////////
+// FLAT and FLATMAP
+
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());
+
+const deepArr = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(deepArr.flat());
+console.log(deepArr.flat(2));
+
+// const accountMovements = accounts.map(acc => acc.movements);
+// const allMovements = accountMovements.flat();
+// const balance = allMovements.reduce((acc, mov) => acc + mov, 0);
+// console.log(balance);
+
+// flat
+const overallBalance = accounts
+  .map(acc => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance);
+
+// flatMap === map + flat in depth 1
+const overallBalance1 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance1);
+
+*/
+
+///////////////////////////
+// Sorting arrays
+
+//strings
+const owners = ['Jonas', 'Zach', ' Adam', 'Martha'];
+console.log(owners.sort());
+console.log(owners);
+
+// numbers
+// console.log(movements.sort()); does not work as expected - sort is sorting by strings
+
+// return < 0; A, B (keep order)
+// return > 0; B, A (switch order)
+// acceding
+movements.sort((a, b) => {
+  if (a > b) return 1;
+  if (a < b) return -1;
+});
+console.log(movements);
+movements.sort((a, b) => a - b);// for numbers
+console.log(movements);
+
+// descending
+movements.sort((a, b) => {
+  if (a > b) return -1;
+  if (a < b) return 1;
+});
+console.log(movements);
+movements.sort((a, b) => b - a);// for numbers
+console.log(movements);
