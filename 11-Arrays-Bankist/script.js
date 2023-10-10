@@ -195,11 +195,22 @@ btnSort.addEventListener('click', function (e) {
   isSorted = !isSorted
   // isSorted = !isSorted - my code
   // displayMovements(currentAccount.movements, isSorted)
+});
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+
+
+
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(document.querySelectorAll('.movements__value'), el => Number(el.textContent.replace('€', '')));
+  // console.log(movementsUI.map(el => Number(el.textContent.replace('€', ''))));
+  console.log(movementsUI);
+
+  const movementsUI2 = [...document.querySelectorAll('.movements__value')];
+  console.log(movementsUI2);
 })
-
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-
 
 
 
