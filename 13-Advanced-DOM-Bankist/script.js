@@ -38,6 +38,8 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+///////////////////////////////////////
+// Smooth scrolling
 btnScrollTo.addEventListener('click', function (e) {
   const s1coords = section1.getBoundingClientRect();
   console.log(s1coords);
@@ -89,8 +91,8 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 
 });
 
+///////////////////////////////////////
 // Tabbed component
-
 
 // tabs.forEach(t => t.addEventListener('click', () => { console.log('TAB') }))
 
@@ -113,6 +115,7 @@ tabsContainer.addEventListener('click', function (e) {
 
 });
 
+///////////////////////////////////////
 // Menu fade animation
 
 const handleHover = function (e) {
@@ -136,6 +139,7 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 
 /////////////////////////////////////////////
 // Sticky navigation
+
 // const initialCords = section1.getBoundingClientRect();
 // console.log(initialCords);
 // // with 'scroll' event -- it should be avoided in practice 
@@ -190,7 +194,7 @@ const allSections = document.querySelectorAll('.section');
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
+  // console.log(entry);
 
   if (!entry.isIntersecting) return;
 
@@ -205,7 +209,37 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add('section--hidden');
-})
+});
+
+
+///////////////////////////////////////
+// Lazy loading images
+
+const imgTargets = document.querySelectorAll('img[data-src]');//with this selector we select all the images that have the 'data-src' property!!!
+// console.log(imgTargets);
+
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+  // console.log(entry);
+
+  if (!entry.isIntersecting) return;
+
+  // Replace src with data-src
+  entry.target.src = entry.target.dataset.src;// when loading finishes JS will emit loading event
+
+  entry.target.addEventListener('load', function () {
+    entry.target.classList.remove('lazy-img');
+  });
+
+  observer.unobserve(entry.target);
+};
+
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0
+});
+
+imgTargets.forEach(img => imgObserver.observe(img));
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
