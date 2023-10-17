@@ -42,27 +42,26 @@ document.addEventListener('keydown', function (e) {
 // Smooth scrolling
 btnScrollTo.addEventListener('click', function (e) {
   const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
-  console.log(e.target.getBoundingClientRect());
-  console.log('Current scroll: ', window.pageXOffset, window.pageYOffset);
-  // console.log('Current scroll: ', window.scrollX, window.scrollY);//alias of pageXOffset and pageYOffset
 
-  console.log('hight/width viewport: ', document.documentElement.clientHeight, document.documentElement.clientWidth);
+  // modern way
+  section1.scrollIntoView({ behavior: 'smooth' });
 
 
   // Old school way
+  // console.log(s1coords);
+  // console.log(e.target.getBoundingClientRect());
+  // console.log('Current scroll: ', window.pageXOffset, window.pageYOffset);
+  // console.log('Current scroll: ', window.scrollX, window.scrollY);//alias of pageXOffset and pageYOffset
+
+  // console.log('hight/width viewport: ', document.documentElement.clientHeight, document.documentElement.clientWidth);
+
   // // so to implement smooth scrolling we need to specify object with left, top and behavior properties.
   // window.scrollTo({
   //   left: s1coords.left + window.scrollX,
   //   top: s1coords.top + window.scrollY,
   //   behavior: 'smooth'
   // })
-
-
-  // modern way
-  section1.scrollIntoView({ behavior: 'smooth' });
-
-})
+});
 
 //////////////////////////////////////////////////
 // Page navigation
@@ -208,7 +207,7 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 });
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
-  section.classList.add('section--hidden');
+  // section.classList.add('section--hidden');
 });
 
 
@@ -236,10 +235,101 @@ const loadImg = function (entries, observer) {
 
 const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
-  threshold: 0
+  threshold: 0,
+  rootMargin: '200px'
 });
 
 imgTargets.forEach(img => imgObserver.observe(img));
+
+///////////////////////////////////////
+// Slider
+
+const slider = function () {
+
+  const slides = document.querySelectorAll('.slide');
+  const btnLeft = document.querySelector('.slider__btn--left');
+  const btnRight = document.querySelector('.slider__btn--right');
+  const dotContainer = document.querySelector('.dots');
+
+  let curSlide = 0;
+  const maxSlide = slides.length;
+
+  // Functions
+  const createDots = function () {
+    slides.forEach(function (_, i) {
+      dotContainer.insertAdjacentHTML('beforeend', `<button class="dots__dot" data-slide="${i}"></button>`);
+    });
+  };
+
+  const activateDot = function (slide) {
+    document
+      .querySelectorAll('.dots__dot')
+      .forEach(dot => dot.classList.remove('dots__dot--active'));
+
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add('dots__dot--active');
+
+  };
+
+  const goToSlide = function (slide) {
+    slides.forEach((s, i) => s.style.transform = `translateX(${100 * (i - slide)}%)`);
+  };
+  // // 0%, 100%, 200%, 300%
+
+  // Next slide
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+  // curSlide = 1; -100%, 0%, 100%, 200%
+
+  const prevSlide = function () {
+    if (curSlide === 0) {
+      curSlide = maxSlide - 1;
+    } else {
+      curSlide--;
+    }
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+
+  const init = function () {
+    goToSlide(0);
+    createDots();
+    activateDot(0);
+  };
+  init();
+
+  // Event handlers
+  btnRight.addEventListener('click', nextSlide);
+  btnLeft.addEventListener('click', prevSlide);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') prevSlide();
+    e.key === 'ArrowRight' && nextSlide();
+  });
+
+  dotContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('dots__dot')) {
+      // const slide = e.target.dataset.slide;
+      const { slide } = e.target.dataset;
+      goToSlide(slide);
+      activateDot(slide);
+    }
+  })
+};
+slider();
+// just some code to see that you can do what you want on the page.. :)
+// const slider = document.querySelector('.slider');
+// slider.style.transform = 'scale(0.4) translateX(-1200px)';
+// slider.style.overflow = 'visible';
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -458,3 +548,20 @@ console.log(h1.parentElement.children);
   if (el !== h1) el.style.transform = 'scale(-0.8) skewX(-15deg)';
 });
 */
+
+// N.B.
+document.addEventListener('DOMContentLoaded', function (e) {
+  console.log('HTML parsed and DOM tree built!', e);
+});
+
+window.addEventListener('load', function (e) {
+  console.log('Page fully loaded', e);
+});
+
+
+// Very useful in some situations
+// window.addEventListener('beforeunload', function (e) {
+//   e.preventDefault();
+//   console.log(e);
+//   e.returnValue = '';
+// });
