@@ -291,7 +291,7 @@ whereAmI(-33.933, 18.474)
 // N.B.
 console.log('Test start');
 setTimeout(() => console.log('0 sec timer'), 0); // Callback Queue!!!!
-Promise.resolve('Promise resolved 1').then(res => console.log(res)); // Microtasks Queue!!!! 
+Promise.resolve('Promise resolved 1').then(res => console.log(res)); // Microtasks Queue!!!!
 Promise.resolve('Promise resolved 2').then(res => {
   for (let i = 0; i < 1000000000; i++) {
   }
@@ -299,5 +299,241 @@ Promise.resolve('Promise resolved 2').then(res => {
 });
 
 console.log('Test end');
-*/
 
+
+const lotteryPromise = new Promise(function (resolve, reject) {
+
+  console.log('Lottery draw is happening 🔮!');
+  setTimeout(function () {
+    if (Math.random() >= 0.5) {
+      resolve('You WIN 💰!!!');
+    } else {
+      reject(new Error('You lost your money... 💩'));
+    }
+  }, 2000);
+});
+
+lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
+
+// Promisifying setTimeout
+
+const wait = function (seconds) {
+  return new Promise(function (res) {
+    setTimeout(res(seconds), seconds * 1000);
+  });
+};
+
+const wait1 = seconds => new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+
+
+// wait(2).then((sec) => {
+//   console.log(`I waited for ${sec} seconds`)
+//   return wait(1);
+// }).then((sec) => console.log(`I waited for ${sec} second`));//immediately resolves, does not wait the setTimeout func.
+
+wait1(1).then(() => {
+  console.log('1 second passed')
+  return wait1(1);
+}).then(() => {
+  console.log('2 second passed')
+  return wait1(1)
+}).then(() => {
+  console.log('3 second passed')
+  return wait1(1)
+}).then(() => {
+  console.log('4 second passed')
+  return wait1(1)
+})
+
+// same as this, but with clean promises code
+
+// setTimeout(() => {
+//   console.log('1 second passed');
+//   setTimeout(() => {
+//     console.log('2 seconds passed');
+//     setTimeout(() => {
+//       console.log('3 seconds passed');
+//       setTimeout(() => {
+//         console.log('4 seconds passed');
+//       }, 1000)
+//     }, 1000)
+//   }, 1000)
+// }, 1000)
+
+
+// Immediately resolve/reject promise!!
+Promise.resolve('No Problem!').then(x => console.log(x));
+Promise.reject(new Error('Problem!')).catch(x => console.error(x));
+Promise.reject(new Error('Problem!')).then(null, x => console.error(x));//same as catch!!
+
+
+
+
+// navigator.geolocation.getCurrentPosition(position => console.log(position), err => console.error(err));
+// // async behavior -> we can check with console.log after it
+// console.log('Getting geolocation');
+
+const getPosition = () => {
+  return new Promise(function (resolve, reject) {
+    // navigator.geolocation.getCurrentPosition(position => resolve(position), err => reject(err));
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  })
+};
+// getPosition().then(pos => console.log(pos)).catch(err => console.error(err));
+
+const whereAmI = function () {
+
+  getPosition()
+    .then(pos => {
+      const { latitude: lat, longitude: lng } = pos.coords;
+      return fetch(`https://geocode.maps.co/reverse?lat=${lat}&lon=${lng}`)
+    })
+    .then(res => {
+      if (res.status === 403) {
+        throw new Error(`Only 3 tries per second! 😬 ${res.status}`)
+      }
+      if (!res.ok) {
+        throw new Error(`Babalugaaaa!!!!! Wrong coords, try again!`)
+      }
+      return res.json();
+    })
+    .then(data => {
+      const country = data.address.country;
+      const city = data.address.city;
+      console.log(`You are in ${city}, ${country}`);
+      return fetch(`https://restcountries.com/v3.1/name/${country.toLocaleLowerCase()}`);
+    })
+    .then(res => {
+      if (!res.ok) {
+        throw new Error(`Babalugaaaa!!!!! Country not found!`)
+      }
+      return res.json();
+    })
+    .then(data => {
+      renderCountry(data[0])
+      const neighbors = data[0].borders || null;
+      if (!neighbors) throw new Error('No neighbors found');
+      // N.B.
+      // whatever we return becomes the fulfilled value of the promise!!!!!!!
+      return fetch(`https://restcountries.com/v3.1/alpha?codes=${neighbors.join(',')}`);
+    })
+    .then(res => {
+      if (!res.ok) {
+        throw new Error(`Babalugaaaa!!!!! Country not found!`)
+      }
+      return res.json();
+    })
+    .then(data => {
+      data.forEach(c => {
+        renderCountry(c, 'neighbour');
+      });
+    })
+    .catch(err => {
+      console.error(`${err}💥💥💥`);
+      renderError(`Something went wrong 💥💥💥${err.message}. Try again!`);
+    })
+    .finally(() => {
+      countriesContainer.style.opacity = '1';
+    });
+};
+
+btn.addEventListener('click', whereAmI);
+
+
+
+///////////////////////////////////////////
+// Coding Challenge #2
+// const img1 = document.createElement('img');
+// const img2 = document.createElement('img');
+// const img3 = document.createElement('img');
+
+const wait = seconds => new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+
+const imgContainer = document.querySelector('.images');
+
+const createImage = function (imagePath) {
+  return new Promise(function (resolve, reject) {
+    const img = document.createElement('img');
+    img.src = imagePath;
+
+    img.addEventListener('load', function () {
+      imgContainer.append(img);
+      resolve(img);
+    })
+
+    img.addEventListener('error', function () {
+      const msg = 'Babaluga, nema snimka!!! 💥💩😬';
+      imgContainer.insertAdjacentText('beforeend', msg);
+      reject(new Error(msg));
+    })
+
+  })
+};
+
+let currentImg;
+
+createImage('img/img-1.jpg')
+  .then((img) => {
+    currentImg = img;
+    console.log('Image 1 loaded');
+    return wait(2);
+  })
+  .then(() => {
+    currentImg.style.display = 'none';
+    return createImage('img/img-2.jpg');
+  })
+  .then((img) => {
+    currentImg = img;
+    console.log('Image 2 loaded');
+    return wait(2);
+  })
+  .then(() => {
+    currentImg.style.display = 'none';
+    return createImage('img/img-3.jpg');
+  })
+  .then((img) => {
+    currentImg = img;
+    console.log('Image 3 loaded');
+    return wait(2);
+  })
+  .then(() => {
+    currentImg.style.display = 'none';
+  })
+  .catch(err => console.error(err));
+
+//mine solution but I think it is slower then Jonases because I use the DOM...
+// createImage('img/img-1.jpg')
+//   .then(() => {
+//     console.log('Image 1 loaded');
+//     return wait(2);
+//   })
+//   .then(() => {
+//     imgContainer.children[0].style.display = 'none';
+//   })
+//   .then(() => {
+//     return createImage('img/img-2.jpg');
+//   })
+//   .then(() => {
+//     console.log('Image 2 loaded');
+//     return wait(2)
+//   })
+//   .then(() => {
+//     const images = [...imgContainer.children]
+//     const newImage = images.slice(-1)[0];
+//     newImage.style.display = 'none';
+//   })
+//   .then(() => {
+//     return createImage('img/img-3.jpg');
+//   })
+//   .then(() => {
+//     console.log('Image 3 loaded');
+//     return wait(2)
+//   })
+//   .then(() => {
+//     const images = [...imgContainer.children]
+//     const newImage = images.slice(-1)[0];
+//     newImage.style.display = 'none';
+//   })
+//   .catch(err => console.error(err));
+
+*/
