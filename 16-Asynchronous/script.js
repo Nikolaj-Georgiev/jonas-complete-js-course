@@ -229,7 +229,7 @@ btn.addEventListener('click', function () {
 ////////////////////////////////////
 // Coding challenge #1;
 
-
+/*
 const whereAmI = function (latitude, longitude) {
   fetch(`https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}`)
     .then(res => {
@@ -284,3 +284,20 @@ const whereAmI = function (latitude, longitude) {
 // whereAmI(52.508, 13.381)
 // whereAmI(19.037, 72.873)
 whereAmI(-33.933, 18.474)
+
+
+////////////////////////////////////////////////
+// Event loop, Callback Queue, Microtasks Queue
+// N.B.
+console.log('Test start');
+setTimeout(() => console.log('0 sec timer'), 0); // Callback Queue!!!!
+Promise.resolve('Promise resolved 1').then(res => console.log(res)); // Microtasks Queue!!!! 
+Promise.resolve('Promise resolved 2').then(res => {
+  for (let i = 0; i < 1000000000; i++) {
+  }
+  console.log(res)
+});
+
+console.log('Test end');
+*/
+
