@@ -26,7 +26,7 @@ const renderCountry = function (data, className = '') {
 `;
 
   countriesContainer.insertAdjacentHTML('beforeend', html);
-  // countriesContainer.style.opacity = '1';
+  countriesContainer.style.opacity = '1';
 };
 
 
@@ -373,6 +373,9 @@ Promise.reject(new Error('Problem!')).then(null, x => console.error(x));//same a
 // // async behavior -> we can check with console.log after it
 // console.log('Getting geolocation');
 
+//////////////////////////////////////////////
+// Promisifying the Geolocation API
+
 const getPosition = () => {
   return new Promise(function (resolve, reject) {
     // navigator.geolocation.getCurrentPosition(position => resolve(position), err => reject(err));
@@ -537,3 +540,33 @@ createImage('img/img-1.jpg')
 //   .catch(err => console.error(err));
 
 */
+
+//////////////////////////////////
+// Async/Await - Consuming promises
+
+// script.js:549 [Violation] Only request geolocation information in response to a user gesture.
+const getPosition = () => {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  })
+};
+
+// fetch(`https://restcountries.com/v3.1/name/${country.toLocaleLowerCase()}`).then(res => console.log(res));//exactly the same as the async/await shown here
+
+const whereAmI = async function () {
+  // Geolocation
+  const pos = await getPosition();
+  const { latitude: lat, longitude: lng } = pos.coords;
+
+  // Reversed geocoding
+  const resGeo = await fetch(`https://geocode.maps.co/reverse?lat=${lat}&lon=${lng}`);
+  const geoData = await resGeo.json();
+
+  // Country data
+  const res = await fetch(`https://restcountries.com/v3.1/name/${geoData.address.country.toLocaleLowerCase()}`);
+  const data = await res.json();
+
+  renderCountry(data[0]);
+};
+whereAmI();
+
