@@ -591,6 +591,7 @@ var _runtime = require("regenerator-runtime/runtime");
 // if (module.hot) {
 //   module.hot.accept();
 // }
+// All 'control' functions can be rename to handlers, because that is what they realy are
 const controlRecipes = async function() {
     try {
         const id = window.location.hash.slice(1);
@@ -628,8 +629,15 @@ const controlPagination = function(goToPage) {
     // 2) Render the current pagination buttons
     (0, _paginationViewJsDefault.default).render(_modelJs.state.search);
 };
+const controlServings = function(newServings) {
+    // Update the recipe servings (in state)
+    _modelJs.updateServings(newServings);
+    // Update the recipe view
+    (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
+};
 const init = function() {
     (0, _recipeViewJsDefault.default).addHandlerRender(controlRecipes);
+    (0, _recipeViewJsDefault.default).addHandlerUpdateServings(controlServings);
     (0, _searchViewJsDefault.default).addHandlerSearch(controlSearchResults);
     (0, _paginationViewJsDefault.default).addHandlerClick(controlPagination);
 };
@@ -2471,6 +2479,7 @@ parcelHelpers.export(exports, "state", ()=>state);
 parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
 parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
 parcelHelpers.export(exports, "getSearchResultsPage", ()=>getSearchResultsPage);
+parcelHelpers.export(exports, "updateServings", ()=>updateServings);
 var _regeneratorRuntime = require("regenerator-runtime");
 var _config = require("./config");
 var _helpers = require("./helpers");
@@ -2525,6 +2534,12 @@ const getSearchResultsPage = function(page = state.search.page) {
     const end = page * state.search.resultsPerPage //9;
     ;
     return state.search.results.slice(start, end);
+};
+const updateServings = function(newServings) {
+    state.recipe.ingredients.forEach((ing)=>{
+        ing.quantity = ing.quantity / state.recipe.servings * newServings;
+    });
+    state.recipe.servings = newServings;
 };
 
 },{"regenerator-runtime":"dXNgZ","./config":"k5Hzs","./helpers":"hGI1E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k5Hzs":[function(require,module,exports) {
@@ -2615,6 +2630,15 @@ class RecipeView extends (0, _viewJsDefault.default) {
             "load"
         ].forEach((ev)=>window.addEventListener(ev, handler));
     }
+    addHandlerUpdateServings(handler) {
+        this._parentElement.addEventListener("click", function(e) {
+            const btn = e.target.closest(".btn--update-servings");
+            if (!btn) return;
+            // const { updateTo } = btn.dataset; //just remainder of destructuring!
+            const updateTo = +btn.dataset.updateTo;
+            if (updateTo > 0) handler(updateTo);
+        });
+    }
     _generateMarkup() {
         return `
     <figure class="recipe__fig">
@@ -2640,12 +2664,12 @@ class RecipeView extends (0, _viewJsDefault.default) {
         <span class="recipe__info-text">servings</span>
 
         <div class="recipe__info-buttons">
-          <button class="btn--tiny btn--increase-servings">
+          <button class="btn--tiny btn--update-servings" data-update-to="${this._data.servings - 1}">
             <svg>
               <use href="${0, _iconsSvgDefault.default}#icon-minus-circle"></use>
             </svg>
           </button>
-          <button class="btn--tiny btn--increase-servings">
+          <button class="btn--tiny btn--update-servings" data-update-to="${this._data.servings + 1}">
             <svg>
               <use href="${0, _iconsSvgDefault.default}#icon-plus-circle"></use>
             </svg>
