@@ -14,9 +14,6 @@ export default class View {
   }
 
   update(data) {
-    if (!data || (Array.isArray(data) && data.length === 0)) {
-      return this.renderError();
-    }
 
     this._data = data;
     const newMarkup = this._generateMarkup();
@@ -29,8 +26,8 @@ export default class View {
       const curEl = curElements[i];
       // console.log(curEl, newEl.isEqualNode(curEl));
 
-      // Updates changed TEXT
-      if (!newEl.isEqualNode(curEl) && newEl.firstChild.textContent.trim() !== '') {
+      // Updates changed TEXT ---> check nodeValue in MDN!!! 
+      if (!newEl.isEqualNode(curEl) && newEl.firstChild?.nodeValue.trim() !== '') {
         // console.log('💥', newEl.firstChild?.textContent.trim());
         curEl.textContent = newEl.textContent;
       }
