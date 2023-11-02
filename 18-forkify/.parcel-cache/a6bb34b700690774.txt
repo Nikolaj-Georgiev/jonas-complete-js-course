@@ -1,4 +1,4 @@
-9584
+9585
 94D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\.prettierrc133384835061108363 0
 120D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\proposals\url.js133432291905494658 0
 125D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-select\lib\general.js.map133432137290316499 0
@@ -16,7 +16,7 @@
 128D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\es\date\to-gmt-string.js133432291901701890 0
 143D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-select\lib\pseudo-selectors\subselects.d.ts133432137297228041 0
 131D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\htmlparser2\lib\WritableStream.d.ts133432137277859796 0
-87D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist133433272747120894 1
+87D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist133433851199105009 1
 132D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\caniuse-lite\data\features\tls1-2.js133432137338142324 0
 127D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\source-map-js\lib\quick-sort.js133432137266128636 0
 128D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\features\string\fixed.js133432291883277287 0
@@ -61,7 +61,7 @@
 104D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\chokidar133432138689464350 1
 118D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\timsort\src\timsort.js133432137267527840 0
 133D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\stable\object\from-entries.js133432291885747623 0
-93D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\index.html133433054409288071 0
+93D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\index.html133433273216920390 0
 128D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\stable\string\replace.js133432291898222421 0
 95D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules133432991636922910 1
 152D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\csso\lib\restructure\prepare\createDeclarationIndexer.js133432137294673645 0
@@ -169,7 +169,7 @@
 115D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\semver\package.json133432137290667831 0
 126D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\core\lib\serializer.js133432137307314144 0
 162D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\mdn-data\css\at-rules.json133432137265878656 0
-99D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\config.js133433146285490827 0
+99D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\config.js133433363385729063 0
 126D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\regenerator-runtime\runtime.js133432291865375338 0
 128D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\nth-check\lib\esm\index.d.ts.map133432137272785563 0
 128D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\es\string\virtual\sup.js133432291901101916 0
@@ -177,7 +177,7 @@
 143D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\core\lib\requests\ParcelBuildRequest.js133432137305441504 0
 113D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\binary-extensions133432138689234176 1
 126D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\es\object\is-frozen.js133432291891902708 0
-103D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\controller.js133433272715208525 0
+103D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\controller.js133433850001892486 0
 174D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\function\expression.js133432137291363820 0
 116D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\electron-to-chromium133432137273657272 1
 141D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\modules\es.typed-array.int32-array.js133432291877149145 0
@@ -197,7 +197,7 @@
 101D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@lmdb133432991636922910 1
 152D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\modules\es.object.get-own-property-descriptor.js133432291875516488 0
 115D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\stable\package.json133432137257012034 0
-98D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\model.js133433162508459971 0
+98D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\model.js133433369803055120 0
 109D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\dotenv-expand133432137264350849 1
 105D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\svgo\dist133432137295027476 1
 126D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\actual\regexp\split.js133432291900183802 0
@@ -225,9 +225,17 @@
 152D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\optimizer-svgo\node_modules\svgo\lib\svgo\coa.js133432137273765368 0
 136D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@swc\helpers\esm\_object_spread_props.js133432137307163826 0
 148D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@babel\code-frame\node_modules\color-name\.npmignore133432137259851947 0
-95D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\views133433187569676848 1
+95D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\views133433371325021636 1
 125D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\actual\reflect\has.js133432291888857080 0
-109D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\views\recipeView.js133433246173936734 0
+127D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\type-fest\source\utilities.d.ts133432137286633431 0
+149D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\posthtml\node_modules\posthtml-parser\dist\index.d.ts133432137266048981 0
+138D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-tree\lib\syntax\node\MediaQueryList.js133432137312109339 0
+122D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\js-yaml\lib\schema\core.js133432137265016240 0
+126D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\csso\cjs\restructure\utils.cjs133432137286753153 0
+132D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\modules\esnext.math.imulh.js133432291879577658 0
+119D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\domutils\lib\index.d.ts133432137279091721 0
+113D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\views\paginationView.js133433851198174482 0
+109D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\views\recipeView.js133433275918295561 0
 137D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\stable\array\virtual\find-last.js133432291882741472 0
 168D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\removeElementsByAttr.js133432137291274812 0
 128D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\react-error-overlay\package.json133432137267057758 0
@@ -239,14 +247,12 @@
 113D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\source-map-js\lib133432137272307004 1
 167D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\workers\test\integration\workerfarm\resolve-shared-reference.js133432137283040535 0
 152D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-select\node_modules\entities\lib\esm\escape.d.ts.map133432137290552010 0
-110D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\views\resultsView.js133433271889063143 0
+110D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\views\resultsView.js133433282384390145 0
 110D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\to-regex-range133432137262046805 1
 133D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\modules\es.promise.finally.js133432291875844397 0
 109D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\views\searchView.js133433185114020894 0
 129D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\stable\instance\repeat.js133432291897972463 0
 118D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\picomatch\lib\utils.js133432137266569516 0
-107D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\cosmiconfig133432137279648919 1
-118D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\escalade\dist\index.js133432137259901937 0
 163D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\lexer\trace.js133432137306290118 0
 136D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\stable\object\define-property.js133432291871724451 0
 122D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\es\array\values.js133432291905604681 0
@@ -262,7 +268,7 @@
 131D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\actual\instance\index-of.js133432291889504162 0
 118D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-tree\cjs\tokenizer133432137306380037 1
 112D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\semver\functions133432137290336844 1
-103D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\views\View.js133433245542975501 0
+103D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\src\js\views\View.js133433280861753758 0
 100D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\.bin133432138697815798 1
 114D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\.package-lock.json133432991637975291 0
 120D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\fs\src\NodeFS.js133432137270899962 0
@@ -335,7 +341,7 @@
 105D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@trysound133432137244221719 1
 131D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\es\string\virtual\strike.js133432291900463735 0
 140D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\features\array\virtual\filter-out.js133432291881746197 0
-109D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\index.e37f48ea.js.map133433272747120894 0
+109D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\index.e37f48ea.js.map133433851199105009 0
 122D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\csso\node_modules\mdn-data133432137284407588 1
 153D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\index.js133432137285611046 0
 133D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\internals\get-substitution.js133432291887605372 0
@@ -394,6 +400,8 @@
 136D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\proposals\regexp-named-groups.js133432291897839510 0
 138D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\transformer-react-refresh-wrap\src133432137265778721 1
 103D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js133432291906399333 1
+107D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\cosmiconfig133432137279648919 1
+118D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\escalade\dist\index.js133432137259901937 0
 116D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\msgpackr\index.d.cts133432137267078164 0
 132D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\features\number\is-finite.js133432291891852638 0
 132D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\es\string\from-code-point.js133432291885687273 0
@@ -1185,7 +1193,6 @@
 141D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\internals\well-known-symbol-define.js133432291906129357 0
 131D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\type-fest\source\tsconfig-json.d.ts133432137286251263 0
 115D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\js-yaml\lib\type.js133432137284457764 0
-127D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\type-fest\source\utilities.d.ts133432137286633431 0
 149D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\internals\structured-clone-proper-transfer.js133432291900776974 0
 126D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\type-fest\source\value-of.d.ts133432137286802881 0
 137D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\features\async-iterator\reduce.js133432291897338550 0
@@ -2090,8 +2097,6 @@
 115D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\path-type\readme.md133432137263580763 0
 126D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\actual\array\concat.js133432291869886686 0
 143D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\posthtml\node_modules\posthtml-parser\readme.md133432137265096239 0
-149D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\posthtml\node_modules\posthtml-parser\dist\index.d.ts133432137266048981 0
-138D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-tree\lib\syntax\node\MediaQueryList.js133432137312109339 0
 160D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\posthtml\node_modules\posthtml-parser\dist\location-tracker.d.ts133432137266847726 0
 124D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\actual\string\sup.js133432291901071882 0
 118D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\msgpackr\dist\index.js133432137272645574 0
@@ -2844,7 +2849,7 @@
 123D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\lines-and-columns\README.md133432137262639612 0
 171D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\atrule\index.js133432137295337600 0
 138D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\actual\string\virtual\pad-start.js133432291895898532 0
-110D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\index.f7626f62.css.map133433271909766960 0
+110D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\index.f7626f62.css.map133433839491801615 0
 136D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\modules\web.url-search-params.js133432291906031243 0
 130D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\lines-and-columns\build\index.d.ts133432137263860776 0
 156D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\lightningcss-win32-x64-msvc\lightningcss.win32-x64-msvc.node133432137305083271 0
@@ -2990,10 +2995,6 @@
 119D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\js-yaml\lib\type\str.js133432137283360126 0
 138D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\features\typed-array\int8-array.js133432291891447249 0
 127D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\modules\es.parse-int.js133432291875739102 0
-122D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\js-yaml\lib\schema\core.js133432137265016240 0
-126D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\csso\cjs\restructure\utils.cjs133432137286753153 0
-132D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\modules\esnext.math.imulh.js133432291879577658 0
-119D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\domutils\lib\index.d.ts133432137279091721 0
 125D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\js-yaml\lib\schema\default.js133432137265978667 0
 126D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\internals\is-forced.js133432291891872726 0
 129D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\full\function\metadata.js133432291894923956 0
@@ -4193,8 +4194,6 @@
 131D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\internals\is-constructor.js133432291891727304 0
 122D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\binary-extensions\index.js133432138689083758 0
 139D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-tree\lib\syntax\node\DeclarationList.js133432137308687527 0
-133D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\internals\to-uint8-clamped.js133432291904006296 0
-128D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-tree\lib\generator\create.js133432137307624680 0
 128D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-tree\lib\syntax\node\Hash.js133432137309127549 0
 143D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-select\node_modules\domutils\lib\index.d.ts133432137293059905 0
 144D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-tree\lib\syntax\node\index-parse-selector.js133432137309337568 0
@@ -4251,6 +4250,8 @@
 123D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-tree\lib\lexer\trace.js133432137314453285 0
 125D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\optimizer-swc\LICENSE133432137257547470 0
 128D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\internals\math-fround.js133432291894773229 0
+133D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\internals\to-uint8-clamped.js133432291904006296 0
+128D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-tree\lib\generator\create.js133432137307624680 0
 138D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-tree\lib\definition-syntax\generate.js133432137308937539 0
 127D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\stable\instance\some.js133432291899842639 0
 135D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\css-tree\lib\definition-syntax\parse.js133432137313510176 0
@@ -5777,7 +5778,7 @@
 130D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\modules\web.set-timeout.js133432291905921234 0
 137D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\actual\reflect\define-property.js133432291871650031 0
 135D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\modules\web.structured-clone.js133432291905951228 0
-106D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\icons.dfd7a6db.svg133433272745776982 0
+106D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\icons.dfd7a6db.svg133433843737989950 0
 148D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\core-js\modules\web.url-search-params.constructor.js133432291905991248 0
 131D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\reporter-dev-server\LICENSE133432137257627573 0
 138D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\packager-js\src\ESMOutputFormat.js133432137270647326 0
@@ -7798,7 +7799,7 @@
 127D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\caniuse-lite\data\regions\MS.js133432137323578132 0
 127D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\caniuse-lite\data\regions\MU.js133432137323618118 0
 130D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\@parcel\utils\test\input\sourcemap133432137303891834 1
-106D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\index.f7626f62.css133433271909706931 0
+106D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\index.f7626f62.css133433839491641463 0
 127D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\caniuse-lite\data\regions\MV.js133432137323698213 0
 127D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\caniuse-lite\data\regions\MZ.js133432137323798211 0
 127D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\caniuse-lite\data\regions\NC.js133432137323866358 0
@@ -9577,9 +9578,9 @@
 109D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\.bin\svgo.ps1133432137340220338 0
 127D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\node_modules\.bin\update-browserslist-db.ps1133432137340220338 0
 114D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\18-forkify.3464ddca.js.map133432138712570837 0
-108D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\favicon.8b2f57bf.png133433271909576937 0
-106D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\icons.21bad73c.svg133433271909986921 0
+108D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\favicon.8b2f57bf.png133433839491651461 0
+106D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\icons.21bad73c.svg133433839492165476 0
 105D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\index.62406edb.js133432138712530846 0
-105D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\index.e37f48ea.js133433272747100798 0
-98D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\index.html133433178329717233 0
-105D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\logo.726d37a8.png133433271909696935 0
+105D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\index.e37f48ea.js133433851199084991 0
+98D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\index.html133433828843291967 0
+105D:\JS\jonas-js-cource\jonas-complete-js-course\jonas-complete-js-course\18-forkify\dist\logo.726d37a8.png133433839491942703 0
